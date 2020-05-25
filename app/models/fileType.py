@@ -1,4 +1,4 @@
 class fileType(object):
-    VEDIO = 'vedio'
-    IMAGE = 'image'
-    TEXT = 'text'
+    VIDEO = 'VIDEO'
+    IMAGE = 'IMAGE'
+    TEXT = 'TEXT'

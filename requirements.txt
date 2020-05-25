@@ -1,0 +1,7 @@
+celery
+pillow
+flask
+flask-restful
+flask-sqlalchemy
+redis
+moviepy

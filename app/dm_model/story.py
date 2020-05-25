@@ -4,7 +4,7 @@ from ..models.fileType import fileType
 
 class Type(enum.Enum):
     IMAGE = "IMAGE"
-    VEDIO = "VEDIO"
+    VIDEO = "VIDEO"
     TEXT = "TEXT"
 
 class Story(Base):
@@ -13,7 +13,8 @@ class Story(Base):
     story_name = db.Column(db.String(80), nullable=False)
     description = db.Column(db.String(200), nullable=False)
     type_of_story = db.Column(db.Enum(Type),  default=Type.TEXT)
-    file_data_location = db.Column(db.String(200))
+    data = db.Column(db.String(200), nullable=False)
     latitude = db.Column(db.String(200), unique=False, nullable=True)
     longitude = db.Column(db.String(200), unique=False, nullable=True)
-
+    resized = db.Column(db.Boolean, default=False)
+  
