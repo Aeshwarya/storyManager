@@ -38,7 +38,7 @@ class StoryService(BaseService):
     def fetchAllStory(self):
         resp = {}
         with self.app.app_context():
-            stories = Story.query.order_by(Story.date_created).all()
+            stories = Story.query.order_by(Story.date_created.desc()).all()
             for s in stories:
                 id = s.id
                 resp[id] = self.getStory(s)
